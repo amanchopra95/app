@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
-import { BroweserRouter as Router, Route, Switch } from 'react-router'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch } from 'react-router'
 
 import routes from '../../routes'
 
