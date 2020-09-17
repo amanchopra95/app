@@ -1,0 +1,18 @@
+.statsCard {
+    background-color: rgba(255,255,255,0.75);
+    text-align: center;
+}
+
+.statsCard > p {
+    color: #000;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.statsCard h3 {
+    color: rgb(0, 114, 167);
+    font-size: 2.2rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+}

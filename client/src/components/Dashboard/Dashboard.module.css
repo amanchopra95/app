@@ -1,0 +1,25 @@
+.bgBlue {
+    background-color: rgb(12, 42, 62);
+}
+
+.my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.heading {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.sub-head {
+    color: #fff;
+    font-size: 1rem;
+}

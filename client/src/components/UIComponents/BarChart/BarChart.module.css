@@ -1,0 +1,41 @@
+.paper-card {
+    background-color: rgba(255,255,255,0.8);
+    padding: 5px;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    margin: 5px;
+    padding: 2px 3px;
+    color: rgb(36, 184, 253);
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.number {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.canvas-container {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 18%
+}
+
+.canvas-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100% !important;
+    width: 100% !important;
+}
