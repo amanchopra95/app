@@ -24,10 +24,12 @@ const FormPage = (props) => {
                         <CardContent>
                             <Grid container direction="column" spacing={2}>
                                 <Grid item col={12}>
-                                    <TextField 
-                                        helperText="Label Column"
-                                        label="Index of Label Column"
-                                    />
+                                    <InputLayout tooltip="Please enter index of label column">
+                                        <TextField 
+                                            helperText="Label Column"
+                                            label="Index of Label Column"
+                                        />
+                                    </InputLayout>
                                 </Grid>
                                 <Grid item col={12}>
                                     <InputLayout tooltip="Please select Yes or No">
@@ -39,10 +41,12 @@ const FormPage = (props) => {
                                     </InputLayout>
                                 </Grid>
                                 <Grid item col={12}>
-                                    <TextField 
-                                        helperText="Label Column"
-                                        label="Index of Label Column"
-                                    />
+                                    <InputLayout tooltip="Please enter Index of Label Column">
+                                        <TextField 
+                                            helperText="Label Column"
+                                            label="Index of Label Column"
+                                        />
+                                    </InputLayout>
                                 </Grid>
                                 <Grid item col={12}>
                                     <InputLayout 
@@ -61,48 +65,66 @@ const FormPage = (props) => {
                         <CardContent>
                             <Grid container direction="column" spacing={2}>
                                 <Grid item col={12}>
-                                    <FormLabel>Hyperparameter Tuning</FormLabel>
-                                    <RadioGroup row>
-                                        <FormControlLabel value="Yes" control={<Radio color="primary" />} label="Yes" />
-                                        <FormControlLabel value="No" control={<Radio color="primary" />} label="No" />
-                                    </RadioGroup>
+                                    <InputLayout tooltip="Enter Hyperparameter Tuning">
+                                        <FormLabel>Hyperparameter Tuning</FormLabel>
+                                        <RadioGroup row>
+                                            <FormControlLabel value="Yes" control={<Radio color="primary" />} label="Yes" />
+                                            <FormControlLabel value="No" control={<Radio color="primary" />} label="No" />
+                                        </RadioGroup>
+                                    </InputLayout>
                                 </Grid>
                                 <Grid item col={12}>
-                                    <FormLabel>K Fold Flag</FormLabel>
-                                    <RadioGroup row>
-                                        <FormControlLabel value="Yes" control={<Radio color="primary" />} label="Yes" />
-                                        <FormControlLabel value="No" control={<Radio color="primary" />} label="No" />
-                                    </RadioGroup>
+                                    <InputLayout tooltip="Enter K Fold Flag">
+                                        <FormLabel>K Fold Flag</FormLabel>
+                                        <RadioGroup row>
+                                            <FormControlLabel value="Yes" control={<Radio color="primary" />} label="Yes" />
+                                            <FormControlLabel value="No" control={<Radio color="primary" />} label="No" />
+                                        </RadioGroup>
+                                    </InputLayout>
+                                    
                                 </Grid>
                                 <Grid item col={12}>
+                                    <InputLayout tooltip="Enter Train Test Spllit Type">
                                     <TextField 
                                         helperText="Label Column"
                                         label="Train Test Spllit Type"
                                     />
+                                    </InputLayout>
+                                    
                                 </Grid>
                                 <Grid item col={12}>
+                                    <InputLayout tooltip="Enter Training Data Percentage">
                                     <TextField 
                                         helperText="Label Column"
                                         label="Training Data Percentage"
                                     />
+                                    </InputLayout>
+                                    
                                 </Grid>
                                 <Grid item col={12}>
+                                    <InputLayout tooltip="Enter Test Data Percentage">
                                     <TextField 
                                         helperText="Label Column"
                                         label="Test Data Percentage"
                                     />
+                                    </InputLayout>
+                                    
                                 </Grid>
                                 <Grid item col={12}>
+                                    <InputLayout tooltip="Enter Maximum Depth of Tree">
                                     <TextField 
                                         helperText="Label Column"
                                         label="Maximum Depth of Tree"
                                     />
+                                    </InputLayout>
                                 </Grid>
                                 <Grid item col={12}>
+                                    <InputLayout tooltip="Enter Minimum Number of Bins">
                                     <TextField 
                                         helperText="Label Column"
                                         label="Minimum Number of Bins"
                                     />
+                                    </InputLayout>
                                 </Grid>
                             </Grid>
                         </CardContent>
