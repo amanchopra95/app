@@ -57,7 +57,7 @@ const LineChart = (props) => {
     return (
         <Grid item lg={6}>
             <Paper className={cls['paper-card']}>
-                <Line data={data} />
+                <Line data={props.data} />
             </Paper>
         </Grid>
     )
