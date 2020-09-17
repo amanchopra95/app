@@ -1,16 +1,23 @@
 import React from 'react'
-import { Grid, Paper } from '@material-ui/core'
+import { Grid, Paper, Container } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const Home = (props) => {
     return(
-        <Grid container>
-            <Grid item>
-                <Paper>Dashboard</Paper>
+        <Container>
+            <Grid container spacing={5} alignItems="center" justify="center" style={{"height": "100vh"}}>
+                <Grid item>
+                    <Paper style={{"padding": "25px"}}>
+                        <Link to="/dashboard">Dashboard</Link>
+                    </Paper>
+                </Grid>
+                <Grid item>
+                    <Paper style={{"padding": "25px"}}>
+                        <Link to="/form">Form</Link>
+                    </Paper>
+                </Grid>
             </Grid>
-            <Grid item>
-                <Paper>Form</Paper>
-            </Grid>
-        </Grid>
+        </Container>
     )
 }
 

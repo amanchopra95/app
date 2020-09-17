@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cls from './Dashboard.module.css'
 import Grid from '@material-ui/core/Grid'
+import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
 
 import background from '../../assets/images/background.png'
@@ -32,37 +33,39 @@ const Dashboard = (props) => {
 
     return (
         <div style={{'backgroundColor': 'rgb(12, 42, 62)', 'width': '100%'}}>
-            <Grid container>
-                <Grid item lg={9} className={[styles.backgroundImage, cls['mx-0']].join(' ')} >
-                    <h4 className={cls['heading']}>CMO Dashboard</h4>
-                    <Grid container spacing={6} alignItems="center" style={{'padding': '0 24px'}}>
-                        {
-                            data.numericalStat ? 
-                                data.numericalStat.map((chart, i) => <NumericalStat title={chart[0]} value={chart[1]} key={`numericalStat_${i}`} />)
-                                :
-                                null
-                        }
+            <Container maxWidth={false} >
+                <Grid container>
+                    <Grid item lg={9} className={[styles.backgroundImage, cls['mx-0']].join(' ')} >
+                        <h4 className={cls['heading']}>CMO Dashboard</h4>
+                        <Grid container spacing={6} alignItems="center" style={{'padding': '0 24px'}}>
+                            {
+                                data.numericalStat ? 
+                                    data.numericalStat.map((chart, i) => <NumericalStat title={chart[0]} value={chart[1]} key={`numericalStat_${i}`} />)
+                                    :
+                                    null
+                            }
+                        </Grid>
+                        <Grid container spacing={6} style={{'padding': '0 24px'}}>
+                            {   data.lineChart ? 
+                                    data.lineChart.map((chart, i) => 
+                                            <LineChart data={chart} key={`lineChar_${i}`} />
+                                    ) :
+                                    null
+                            }
+                        </Grid>
                     </Grid>
-                    <Grid container spacing={6} style={{'padding': '0 24px'}}>
-                        {   data.lineChart ? 
-                                data.lineChart.map((chart, i) => 
-                                        <LineChart data={chart} key={`lineChar_${i}`} />
-                                ) :
-                                null
-                        }
+                    <Grid item lg={3} className={[cls.bgBlue, cls['mx-0']].join(' ')}>
+                        <Grid container spacing={3} justify="center" style={{'padding' : '0 12px'}}>
+                            <h4 className={cls['sub-head']}>Selected Period this month</h4>
+                            {
+                                data.barChart ? 
+                                    data.barChart.map((chart, i) => <BarChart data={chart} key={`barChar_${i}`} />)
+                                    : null
+                            }
+                        </Grid>
                     </Grid>
                 </Grid>
-                <Grid item lg={3} className={[cls.bgBlue, cls['mx-0']].join(' ')}>
-                    <Grid container spacing={3} justify="center" style={{'padding' : '0 12px'}}>
-                        <h4 className={cls['sub-head']}>Selected Period this month</h4>
-                        {
-                            data.barChart ? 
-                                data.barChart.map((chart, i) => <BarChart data={chart} key={`barChar_${i}`} />)
-                                : null
-                        }
-                    </Grid>
-                </Grid>
-            </Grid>
+            </Container>
         </div>
     )
 }
