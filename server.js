@@ -19,8 +19,10 @@ app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 })
 
-const server = app.listen(5000, () => {
-    console.log("Server running in " + process.env.NODE_ENV + " mode on port " + 5000)
+const PORT = process.env.port || 5000
+
+const server = app.listen(PORT, () => {
+    console.log("Server running in " + process.env.NODE_ENV + " mode on port " + PORT)
 })
 
 process.on('unhandledRejection', (err, promise) => {
