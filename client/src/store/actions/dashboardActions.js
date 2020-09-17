@@ -4,13 +4,13 @@ import axios from 'axios'
 export const loadData = () => {
     return (dispatch) => {
         axios({
-            url: '',
+            url: '/data',
             method: 'GET',
         })
         .then((resp) => {
             disptach({
                 type: DATA_LOADED,
-                payload: {...resp.data}
+                payload: {...resp.data.data}
             })
         })
         .catch((err) => {

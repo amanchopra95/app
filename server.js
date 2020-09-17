@@ -4,15 +4,19 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
+// Router
+const data = require('./src/routes/data')
+
 const app = express()
 
 app.use(express.json())
 
 // Set Static Folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'client/build')))
 
-app.use('/', (req, res) => {
-    return res.send("index.html")
+app.use('/data', data)
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 })
 
 const server = app.listen(5000, () => {
